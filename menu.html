@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crunchies | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container nav">
+  <a class="logo" href="index.html"><span>CRUNCHIES</span><small>FRIED CHICKEN</small></a>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <nav class="nav-links"><a href="index.html">Home</a><a class="active" href="menu.html">Menu</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav>
+  <a class="btn btn-red nav-order" href="#cart">Cart (<span id="cartCount">0</span>)</a>
+</div></header>
+
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">CRUNCHIES</p><h1>Our Menu</h1><p>Choose your favourites and add them to your order.</p></div></section>
+
+<section class="section"><div class="container">
+  <div class="order-selector">
+    <div><label>State</label><select id="state"><option>Abia</option><option>Rivers</option><option>Cross River</option><option>Lagos</option></select></div>
+    <div><label>City</label><select id="city"><option>Aba</option><option>Port Harcourt</option><option>Calabar</option><option>Lagos</option></select></div>
+    <div><label>Branch</label><select><option>Nearest available branch</option><option>Main Branch</option></select></div>
+    <div><label>Order type</label><select id="orderType"><option>Delivery</option><option>Pickup</option></select></div>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="tab active" data-filter="all">All</button><button class="tab" data-filter="food">Food</button><button class="tab" data-filter="protein">Protein</button><button class="tab" data-filter="pastries">Pastries</button><button class="tab" data-filter="cakes">Cakes</button><button class="tab" data-filter="shawarma">Shawarma</button><button class="tab" data-filter="bread">Bread</button>
+  </div>
+
+  <div class="product-grid" id="menuProducts">
+    <article class="product-card menu-product" data-category="food"><img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=700&q=85" alt="Chicken"><div class="product-info"><h3>Fried Chicken Meal</h3><p>Crispy chicken and sides.</p><div><strong>₦5,500</strong><button class="plus add-cart" data-name="Fried Chicken Meal" data-price="5500">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="food"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=85" alt="Burger"><div class="product-info"><h3>Chicken Burger</h3><p>Juicy chicken burger.</p><div><strong>₦4,500</strong><button class="plus add-cart" data-name="Chicken Burger" data-price="4500">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="protein"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Chicken"><div class="product-info"><h3>Chicken Protein</h3><p>Perfect for a protein-packed meal.</p><div><strong>₦4,000</strong><button class="plus add-cart" data-name="Chicken Protein" data-price="4000">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="pastries"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="Pastry"><div class="product-info"><h3>Fresh Pastry</h3><p>Freshly baked treat.</p><div><strong>₦1,500</strong><button class="plus add-cart" data-name="Fresh Pastry" data-price="1500">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="cakes"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="Cake"><div class="product-info"><h3>Celebration Cake</h3><p>Sweet and beautifully prepared.</p><div><strong>₦12,000</strong><button class="plus add-cart" data-name="Celebration Cake" data-price="12000">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="shawarma"><img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=700&q=85" alt="Shawarma"><div class="product-info"><h3>Chicken Shawarma</h3><p>Loaded with chicken and fresh fillings.</p><div><strong>₦4,500</strong><button class="plus add-cart" data-name="Chicken Shawarma" data-price="4500">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="bread"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85" alt="Bread"><div class="product-info"><h3>Fresh Bread</h3><p>Soft, warm and freshly baked.</p><div><strong>₦2,000</strong><button class="plus add-cart" data-name="Fresh Bread" data-price="2000">+</button></div></div></article>
+    <article class="product-card menu-product" data-category="food"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=85" alt="Pizza"><div class="product-info"><h3>Crunchies Pizza</h3><p>Cheesy and loaded with toppings.</p><div><strong>₦7,000</strong><button class="plus add-cart" data-name="Crunchies Pizza" data-price="7000">+</button></div></div></article>
+  </div>
+
+  <div class="cart-box" id="cart"><h2>Your Order</h2><div id="cartItems"><p class="empty-cart">Your cart is empty.</p></div><div class="cart-total"><span>Total</span><strong id="cartTotal">₦0</strong></div><button id="checkoutBtn" class="btn btn-red">Place Order</button></div>
+</div></section>
+</main>
+<footer><div class="container footer-grid"><div><a class="logo footer-logo" href="index.html"><span>CRUNCHIES</span><small>FRIED CHICKEN</small></a><p>Taste the difference.</p></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><div><h3>Contact</h3><p>6 Factory Road, Opp. Bata Junction, Aba, Abia State.</p><p>09062439146<br>09169982493</p></div><div><h3>Opening Hours</h3><p>Monday - Sunday</p><strong>7:00 AM - 9:00 PM</strong></div></div><div class="copyright">© 2026 Crunchies Fried Chicken. Student recreation for educational purposes.</div></footer>
+<script src="script.js"></script>
+</body></html>
